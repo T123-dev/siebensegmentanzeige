@@ -26,48 +26,50 @@ void setup() {
 }
 
 void loop() {
-  one(D1);
-  two(D2);
+  zero(D1);
+  one(D2);
+  eight(D3);
+  seven(D4);
 }
 void off() {
   digitalWrite(D1, HIGH);
   digitalWrite(D2, HIGH);
   digitalWrite(D3, HIGH);
   digitalWrite(D4, HIGH);
+  digitalWrite(A, LOW);
+  digitalWrite(B, LOW);
+  digitalWrite(C, LOW);
+  digitalWrite(D, LOW);
+  digitalWrite(E, LOW);
+  digitalWrite(F, LOW);
+  digitalWrite(G, LOW);
 }
 
 
 void one(int Dx) {
-  digitalWrite(D1, LOW);
-  digitalWrite(D2, HIGH);
-  digitalWrite(D3, HIGH);
-  digitalWrite(D4, HIGH);
+  off();
+  digitalWrite(Dx, LOW);
   digitalWrite(B, HIGH);
   digitalWrite(C, HIGH);
-off();
 }
 void two(int Dx) {
-  digitalWrite(D1, HIGH);
-  digitalWrite(D2, LOW);
-  digitalWrite(D3, HIGH);
-  digitalWrite(D4, HIGH);
+  off();
+  digitalWrite(Dx, LOW);
 
   digitalWrite(B, HIGH);
   digitalWrite(A, HIGH);
   digitalWrite(E, HIGH);
   digitalWrite(G, HIGH);
   digitalWrite(D, HIGH);
-  off();
 }
 void three(int Dx) {
-  
+  off();
   digitalWrite(Dx, LOW);
   digitalWrite(A, HIGH);
   digitalWrite(B, HIGH);
   digitalWrite(C, HIGH);
   digitalWrite(D, HIGH);
   digitalWrite(G, HIGH);
-  off();
 }
 void four(int Dx) {
   off();
